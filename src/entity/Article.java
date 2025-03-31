@@ -1,8 +1,8 @@
 package entity;
 
 public class Article {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
     private String category;
     private double price;
     private int stock;

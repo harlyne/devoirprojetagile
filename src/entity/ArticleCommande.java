@@ -1,10 +1,12 @@
 package entity;
 
-public class ArticleCommande {
-    private Article article;
-    private int quantity;
+public final class ArticleCommande {
+    private final Article article;
+    private final int quantity;
     
     public ArticleCommande(Article article, int quantity) {
+        if (article == null) throw new IllegalArgumentException("Article requis");
+        if (quantity <= 0) throw new IllegalArgumentException("Quantité invalide");
         this.article = article;
         this.quantity = quantity;
     }
